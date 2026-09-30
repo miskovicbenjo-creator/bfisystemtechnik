@@ -1,0 +1,20 @@
+PS C:\Users\bfi> Get-CimInstance -ClassName Win32_NetworkAdapterConfiguration -Filter "IPEnabled = True" | 
+    Select-Object @{Name="Schnittstelle"; Expression={$_.Description}},
+                  @{Name="DHCP Aktiv"; Expression={$_.DHCPEnabled}},
+                  @{Name="IP-Adresse"; Expression={$_.IPAddress -join ', '}},
+                  @{Name="Subnetzmaske"; Expression={$_.IPSubnet -join ', '}},
+                  @{Name="Standard-Gateway"; Expression={$_.DefaultIPGateway -join ', '}},
+                  @{Name="DNS-Server"; Expression={$_.DNSServerSearchOrder -join ', '}} | 
+    Format-List
+
+
+
+
+Schnittstelle    : Intel(R) Wi-Fi 6 AX201 160MHz
+DHCP Aktiv       : True
+IP-Adresse       : 10.16.100.56, fe80::da54:e413:c871:9505
+Subnetzmaske     : 255.255.255.0, 64
+Standard-Gateway : 10.16.100.1
+DNS-Server       : 10.10.100.11, 10.10.100.12
+
+
