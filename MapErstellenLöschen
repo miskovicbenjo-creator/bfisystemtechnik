@@ -1,0 +1,323 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\bfi> pwd
+
+Path
+----
+C:\Users\bfi
+
+
+PS C:\Users\bfi> 1s-1a
+1s-1a : Die Benennung "1s-1a" wurde nicht als Name eines Cmdlet, einer Funktion, einer Skriptdatei oder eines
+ausführbaren Programms erkannt. Überprüfen Sie die Schreibweise des Namens, oder ob der Pfad korrekt ist (sofern
+enthalten), und wiederholen Sie den Vorgang.
+In Zeile:1 Zeichen:1
++ 1s-1a
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (1s-1a:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\bfi> 1s -1a
+1s : Die Benennung "1s" wurde nicht als Name eines Cmdlet, einer Funktion, einer Skriptdatei oder eines ausführbaren
+Programms erkannt. Überprüfen Sie die Schreibweise des Namens, oder ob der Pfad korrekt ist (sofern enthalten), und
+wiederholen Sie den Vorgang.
+In Zeile:1 Zeichen:1
++ 1s -1a
++ ~~
+    + CategoryInfo          : ObjectNotFound: (1s:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\bfi> get-location
+
+Path
+----
+C:\Users\bfi
+
+
+PS C:\Users\bfi> get-childtem
+get-childtem : Die Benennung "get-childtem" wurde nicht als Name eines Cmdlet, einer Funktion, einer Skriptdatei oder
+eines ausführbaren Programms erkannt. Überprüfen Sie die Schreibweise des Namens, oder ob der Pfad korrekt ist (sofern
+enthalten), und wiederholen Sie den Vorgang.
+In Zeile:1 Zeichen:1
++ get-childtem
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (get-childtem:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\bfi> dir / 1s
+PS C:\Users\bfi>
+PS C:\Users\bfi> cd download
+cd : Der Pfad "C:\Users\bfi\download" kann nicht gefunden werden, da er nicht vorhanden ist.
+In Zeile:1 Zeichen:1
++ cd download
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\bfi\download:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\bfi> cd download
+cd : Der Pfad "C:\Users\bfi\download" kann nicht gefunden werden, da er nicht vorhanden ist.
+In Zeile:1 Zeichen:1
++ cd download
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\bfi\download:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\bfi> cd ~ /download
+Set-Location : Es wurde kein Positionsparameter gefunden, der das Argument "/download" akzeptiert.
+In Zeile:1 Zeichen:1
++ cd ~ /download
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Set-Location], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\bfi> cd ~/downloads
+PS C:\Users\bfi\downloads> 1s
+1s : Die Benennung "1s" wurde nicht als Name eines Cmdlet, einer Funktion, einer Skriptdatei oder eines ausführbaren
+Programms erkannt. Überprüfen Sie die Schreibweise des Namens, oder ob der Pfad korrekt ist (sofern enthalten), und
+wiederholen Sie den Vorgang.
+In Zeile:1 Zeichen:1
++ 1s
++ ~~
+    + CategoryInfo          : ObjectNotFound: (1s:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\bfi\downloads> l s1
+l : Die Benennung "l" wurde nicht als Name eines Cmdlet, einer Funktion, einer Skriptdatei oder eines ausführbaren
+Programms erkannt. Überprüfen Sie die Schreibweise des Namens, oder ob der Pfad korrekt ist (sofern enthalten), und
+wiederholen Sie den Vorgang.
+In Zeile:1 Zeichen:1
++ l s1
++ ~
+    + CategoryInfo          : ObjectNotFound: (l:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\bfi\downloads> ls
+
+
+    Verzeichnis: C:\Users\bfi\downloads
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        28.09.2026     19:22         554832 BGBLA_2018_II_222 (1).pdfsig
+-a----        28.09.2026     19:22         554832 BGBLA_2018_II_222.pdfsig
+-a----        28.09.2026     21:25       71356472 Filius-Setup_with-JRE-2.14.0.exe
+-a----        30.09.2026     20:40       66697744 Git-2.56.0-64-bit.exe
+-a----        30.09.2026     21:25        6963432 npp.8.9.8.1.Installer.x64.exe
+
+
+PS C:\Users\bfi\downloads> cd
+PS C:\Users\bfi\downloads> cd ..
+PS C:\Users\bfi> ..
+.. : Die Benennung ".." wurde nicht als Name eines Cmdlet, einer Funktion, einer Skriptdatei oder eines ausführbaren
+Programms erkannt. Überprüfen Sie die Schreibweise des Namens, oder ob der Pfad korrekt ist (sofern enthalten), und
+wiederholen Sie den Vorgang.
+In Zeile:1 Zeichen:1
++ ..
++ ~~
+    + CategoryInfo          : ObjectNotFound: (..:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\bfi> cd ..
+PS C:\Users> cd ..
+PS C:\> cd ..
+PS C:\> new item -itemtype Directory Schule
+new : Die Benennung "new" wurde nicht als Name eines Cmdlet, einer Funktion, einer Skriptdatei oder eines ausführbaren
+Programms erkannt. Überprüfen Sie die Schreibweise des Namens, oder ob der Pfad korrekt ist (sofern enthalten), und
+wiederholen Sie den Vorgang.
+In Zeile:1 Zeichen:1
++ new item -itemtype Directory Schule
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (new:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\> New-Item -ItemType Directory Skola
+
+
+    Verzeichnis: C:\
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        01.10.2026     22:00                Skola
+
+
+PS C:\> cd skola
+PS C:\skola> "Heute lerne ich PowerSchell Comands
+
+
+
+
+
+
+
+           >
+PS C:\skola> "Heute lerne ich Powerschell Comands! | Out-File lekcija.txt
+>> dir
+>> ^C
+PS C:\skola> "Heute lerne ich Powerschell Comands! | Out-File lekcija.txt^C
+PS C:\skola> "Heut lerne ich Powerschell Comands!" | Out-File lekcija.txt
+PS C:\skola> dir
+
+
+    Verzeichnis: C:\skola
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        01.10.2026     22:07             76 lekcija.txt
+
+
+PS C:\skola> cd ..
+PS C:\> cd..
+PS C:\> test-connection google.com
+
+Source        Destination     IPV4Address      IPV6Address                              Bytes    Time(ms)
+------        -----------     -----------      -----------                              -----    --------
+G-W-FSGFN73   google.com      142.250.109.113  2a00:1450:4025:800::8b                   32       49
+G-W-FSGFN73   google.com      142.250.109.113  2a00:1450:4025:800::8b                   32       61
+G-W-FSGFN73   google.com      142.250.109.113  2a00:1450:4025:800::8b                   32       55
+G-W-FSGFN73   google.com      142.250.109.113  2a00:1450:4025:800::8b                   32       63
+
+
+PS C:\> test-connection google.com -TraceRoute
+Test-Connection : Es wurde kein Parameter gefunden, der dem Parameternamen "TraceRoute" entspricht.
+In Zeile:1 Zeichen:28
++ test-connection google.com -TraceRoute
++                            ~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Test-Connection], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.TestConnectionCommand
+
+PS C:\> Test-Connection google.com -TraceRoute
+Test-Connection : Es wurde kein Parameter gefunden, der dem Parameternamen "TraceRoute" entspricht.
+In Zeile:1 Zeichen:28
++ Test-Connection google.com -TraceRoute
++                            ~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Test-Connection], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.TestConnectionCommand
+
+PS C:\> Test-Connection google.com -TraceRoute
+Test-Connection : Es wurde kein Parameter gefunden, der dem Parameternamen "TraceRoute" entspricht.
+In Zeile:1 Zeichen:28
++ Test-Connection google.com -TraceRoute
++                            ~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Test-Connection], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.TestConnectionCommand
+
+PS C:\> traceart google.com
+traceart : Die Benennung "traceart" wurde nicht als Name eines Cmdlet, einer Funktion, einer Skriptdatei oder eines
+ausführbaren Programms erkannt. Überprüfen Sie die Schreibweise des Namens, oder ob der Pfad korrekt ist (sofern
+enthalten), und wiederholen Sie den Vorgang.
+In Zeile:1 Zeichen:1
++ traceart google.com
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (traceart:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\> tracert google.com
+
+Routenverfolgung zu google.com [2a00:1450:4025:800::8b]
+über maximal 30 Hops:
+
+  1     6 ms     8 ms     6 ms  2001:4bb8:12d:ba6b:eddf:1ca9:38ed:8037
+  2     *        *        *     Zeitüberschreitung der Anforderung.
+  3     *        *        *     Zeitüberschreitung der Anforderung.
+  4     *        *        *     Zeitüberschreitung der Anforderung.
+  5     *        *        *     Zeitüberschreitung der Anforderung.
+  6     *        *        *     Zeitüberschreitung der Anforderung.
+  7     *        *        *     Zeitüberschreitung der Anforderung.
+  8     *        *        *     Zeitüberschreitung der Anforderung.
+  9     *        *        *     Zeitüberschreitung der Anforderung.
+ 10     *        *        *     Zeitüberschreitung der Anforderung.
+ 11     *        *        *     Zeitüberschreitung der Anforderung.
+ 12     *        *        *     Zeitüberschreitung der Anforderung.
+ 13     *        *        *     Zeitüberschreitung der Anforderung.
+ 14
+PS C:\> Invoke-RestMethod ipinfo.io/json
+
+
+ip       : 213.225.6.24
+hostname : 213-225-6-24.nat.highway.a1.net
+city     : Wiener Neustadt
+region   : Lower Austria
+country  : AT
+loc      : 47.8049,16.2320
+org      : AS8447 A1 Telekom Austria AG
+postal   : 2700
+timezone : Europe/Vienna
+readme   : https://ipinfo.io/missingauth
+
+
+
+PS C:\> remove-item skola -recurse
+PS C:\> dir
+
+
+    Verzeichnis: C:\
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        09.12.2024     11:34                Dell
+d-----        18.08.2025     09:54                DKSInstall
+d-----        30.09.2026     20:44                GIT
+d-----        15.08.2025     14:26                inetpub
+d-----        01.10.2026     21:21                Intel
+d-----        01.04.2024     09:26                PerfLogs
+d-r---        30.09.2026     21:26                Program Files
+d-r---        24.09.2026     13:55                Program Files (x86)
+d-----        04.05.2026     14:00                Temp
+d-----        18.08.2025     10:11                tmp
+d-r---        05.05.2026     14:35                Users
+d-----        28.09.2026     19:56                Windows
+d-----        18.08.2025     11:53                xampp
+
+
+PS C:\> ls
+
+
+    Verzeichnis: C:\
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        09.12.2024     11:34                Dell
+d-----        18.08.2025     09:54                DKSInstall
+d-----        30.09.2026     20:44                GIT
+d-----        15.08.2025     14:26                inetpub
+d-----        01.10.2026     21:21                Intel
+d-----        01.04.2024     09:26                PerfLogs
+d-r---        30.09.2026     21:26                Program Files
+d-r---        24.09.2026     13:55                Program Files (x86)
+d-----        04.05.2026     14:00                Temp
+d-----        18.08.2025     10:11                tmp
+d-r---        05.05.2026     14:35                Users
+d-----        28.09.2026     19:56                Windows
+d-----        18.08.2025     11:53                xampp
+
+
+PS C:\> ls
+
+
+    Verzeichnis: C:\
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        09.12.2024     11:34                Dell
+d-----        18.08.2025     09:54                DKSInstall
+d-----        30.09.2026     20:44                GIT
+d-----        15.08.2025     14:26                inetpub
+d-----        01.10.2026     21:21                Intel
+d-----        01.04.2024     09:26                PerfLogs
+d-r---        30.09.2026     21:26                Program Files
+d-r---        24.09.2026     13:55                Program Files (x86)
+d-----        04.05.2026     14:00                Temp
+d-----        18.08.2025     10:11                tmp
+d-r---        05.05.2026     14:35                Users
+d-----        28.09.2026     19:56                Windows
+d-----        18.08.2025     11:53                xampp
+
+
+PS C:\>
